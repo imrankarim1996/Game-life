@@ -9,7 +9,7 @@
 
 
     <header>
-      <div class="logo">GameLife</div>
+      <div class="logo"><a href="index.html"> GameLife</a></div>
         <nav>
           <ul>
             <li><a href="index.html" >Home</a></li>
@@ -30,35 +30,27 @@
         <h1 class="recent-post-title title-background">Community</h1>
 
         <table class="tableLeft">
-
-
-
-          <tr>
-            <td colspan="2"><h2 style="float :left;padding: 10px;">Shout out your opinion!</h2></td>
-          </tr>
-
-          <tr>
-            <td>
-
-                <label for="name"><h3>Your name</h3></label>
-                <input type="text" name="ame" class="text-input contact-input" style="width: auto;" >
-             </td>
-
-             <td>
-              <label for="avatar" style="margin-top: 0;"><h3>Upload your avatar</h3></label>
-              <input type="file" name="avatar" class="contact-input">
-
-             </td>
-          </tr>
-          <tr>
-            <td>
-              <label for="message"><h3>Your Message</h3></label>
-                <textarea rows="4" name="message" class="text-input contact-input" style="width: auto;" ></textarea>
-            </td>
-            <td><a href="one.html" class="btn read-more" style="margin: 50;">Post</a></td>
-            <td><img src="image/logo.png" alt=""></td>
-          </tr>
-
+          <div class="post">
+              <form  onsubmit = "return submitpost()">
+                <label for="name" id="nameid" style="text-align: center;" >Name</label>
+                <input style="width: 80%;" type="text" name="name" id="nameid-input" class="text-input contact-input" placeholder="Your name...">
+                <br>
+                <label for="name" id="nameid" >Title</label>
+                <input style="width: 80%;"type="text" name="name" id="nameid-input" class="text-input contact-input" placeholder="Your title...">
+                <br><label for="name" id="nameid" >Your content</label>
+                <input style="width: 80%;"type="text" name="name" id="nameid-input" class="text-input contact-input" placeholder="Your content...">
+                <br><label style="width: 80%;"for="name" id="nameid" >Date</label>
+                <label for="name" id="nameid" ></label>
+                <input style="width: 80%;"type="date" name="name" id="nameid-input" class="text-input contact-input" placeholder="Date">
+                <br><label for="name" id="nameid" >Profile picture</label>
+                <input style="width: 80%;"type="file" name="name" id="nameid-input" class="text-input contact-input" placeholder="Your name...">
+                
+              
+          </form>
+          <button onclick="submitpost()" class="btn btn-big contact-btn">
+            <i class="fa fa-envelope"></i>
+            Send</button>
+          </div>
         </table>
 
 
@@ -115,9 +107,7 @@
 <!--Sidebar-->
       <div class="sidebar">
         <div class="section search">
-          <h2 class="section-title">Search</h2>
-          <form action="index.html" class="post"></form>
-          <input type="text" name="search-term" class="text-input" placeholder="Search...">
+          <h2><a class="search-database" href="search.html">Search game database</a></h2>
         </div>
       <div class="section topic">
         <h2 class="section-title">Recommended Games</h2>
@@ -181,13 +171,18 @@
     <div class="footer-section contact-forms">
       <h2>Contact Us</h2>
       <br>
-      <form action="index.html" method="post">
-        <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
-        <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn btn-big contact-btn">
+      <!-- ///////////////////////////////// -->
+      <form  onsubmit = "return validate()">
+        <label for="email" id="labalEmail" ></label>
+        <input type="email" name="email" id="email" class="text-input contact-input" placeholder="Your email address...">
+
+        <label for="texArea" id="labalTxtArea"></label>
+        <textarea rows="4" name="message" id="texArea" class="text-input contact-input" placeholder="Your Message"></textarea>
+        <button  class="btn btn-big contact-btn">
           <i class="fa fa-envelope"></i>
           Send</button>
       </form>
+      <!-- ///////////////////////////////// -->
     </div>
 
   </div>
@@ -206,6 +201,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="scripts/javascript.js">
+
+    </script>
+    <script src="scripts/test.js">
 
     </script>
 

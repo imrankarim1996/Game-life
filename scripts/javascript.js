@@ -39,4 +39,8 @@ $(document).ready(function(){
           // instead of a settings object
         ]
       })
+      
     })
+    function submitpost(){
+      alert("The post have been submitted for approval");
+    }

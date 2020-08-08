@@ -271,7 +271,7 @@ table {
 
   td {
     width: 33% ;
-    padding-left: 30px;
+    padding: 15px;
   }
   .side-td {
     padding: 0px;
@@ -517,7 +517,34 @@ table {
     color: blue;
   }
 }
+.search-database:hover{
+  padding-left: 10px;
+  color: orangered;
+  transition: all 0.3s;
 
+}
+button{
+  padding: .5rem 1rem;
+  background: black;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  display: inline-block;
+  margin: 15px;
+}
+button:hover{
+  color: orangered;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+#nameid{
+  margin: 10px;
+  padding: 10px;
+}
+#nameid-input{
+  
+  margin-top: 10px;
+}
 /*debug*/
 #slick-slide-control00{
   display: none;}
